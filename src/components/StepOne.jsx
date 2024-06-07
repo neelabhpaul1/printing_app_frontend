@@ -144,8 +144,7 @@ function StepOne({
     <>
       {idPresent ? (
         <div className="min-h-screen flex justify-center items-center absolute w-full bg-white z-10">
-          <p className="md:text-3xl">Please Enter Valid Shop ID in the URL</p>
-          <p className="text-left md:text-3xl"> TERMS OF SERVICE
+          <p> TERMS OF SERVICE
 OVERVIEW
 This website is operated by HIVERYLABS PRIVATE LIMITED. Throughout the site, the terms “we”, “us” and “our” refer to HIVERYLABS PRIVATE LIMITED. HIVERYLABS PRIVATE LIMITED offers this website, including all information, tools and Services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.
 
@@ -255,7 +254,7 @@ HIVERYLABS PRIVATE LIMITED
 rtp.hiverylabs@gmail.com
 RAIPUR, C.G. 492001
  </p>
- <p className="text-left md:text-3xl">  
+ <p>  
  PRIVACY POLICY
  
 
@@ -371,11 +370,14 @@ Should you have any questions about our privacy practices or this Privacy Policy
 
 HIVERYLABS PRIVATE LIMITED
 rtp.hiverylabs@gmail.com
+HOUSE NO 308, 3RD FLOOR, GOLCHHA ENCLAAVE, AMLIDIH
 RAIPUR, C.G. 492001
+
+Mobile +918982035939
 
  </p>
 
- <p className="text-left md:text-3xl">
+ <p>
 
  CONTACT US
 
@@ -388,6 +390,12 @@ Whether you've got questions, suggestions, or simply want to share your experien
 Regards,
 
 HIVERYLABS PRIVATE LIMITED
+
+rtp.hiverylabs@gmail.com
+HOUSE NO 308, 3RD FLOOR, GOLCHHA ENCLAAVE, AMLIDIH
+RAIPUR, C.G. 492001
+
+Mobile +918982035939
  </p>
 
         </div>
