@@ -144,7 +144,7 @@ function StepOne({
     <>
       {idPresent ? (
         <div className="min-h-screen flex justify-center items-center absolute w-full bg-white z-10">
-          <p style="{width=100%}"> TERMS OF SERVICE
+          <p> TERMS OF SERVICE
 OVERVIEW
 This website is operated by HIVERYLABS PRIVATE LIMITED. Throughout the site, the terms “we”, “us” and “our” refer to HIVERYLABS PRIVATE LIMITED. HIVERYLABS PRIVATE LIMITED offers this website, including all information, tools and Services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.
 
@@ -254,7 +254,7 @@ HIVERYLABS PRIVATE LIMITED
 rtp.hiverylabs@gmail.com
 RAIPUR, C.G. 492001
  </p>
- <p style="{width=100%}">  
+ <p>  
  PRIVACY POLICY
  
 
@@ -377,7 +377,7 @@ Mobile +918982035939
 
  </p>
 
- <p style="{width=100%}">
+ <p>
 
  CONTACT US
 
