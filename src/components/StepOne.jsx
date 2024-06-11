@@ -145,9 +145,8 @@ function StepOne({
       {idPresent ? (
         
         
-        <div className="min-h-screen flex justify-center items-center absolute w-full bg-white z-10">
-          <title>HIVERYLABS PRIVATE LIMITED</title>
-          <h1> HIVERYLABS PRIVATE LIMITED </h1>
+        <div className="min-h-screen flex flex-col justify-center items-center absolute w-full bg-white z-10">
+          <strong> HIVERYLABS PRIVATE LIMITED </strong>
           <p> TERMS OF SERVICE
 OVERVIEW
 This website is operated by HIVERYLABS PRIVATE LIMITED. Throughout the site, the terms “we”, “us” and “our” refer to HIVERYLABS PRIVATE LIMITED. HIVERYLABS PRIVATE LIMITED offers this website, including all information, tools and Services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.
