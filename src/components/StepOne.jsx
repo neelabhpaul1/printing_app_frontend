@@ -147,7 +147,7 @@ function StepOne({
         
         <div className="min-h-screen flex flex-col justify-center items-center absolute w-full bg-white z-10">
           <h1 className="text-2xl font-bold mb-4"> HIVERYLABS PRIVATE LIMITED </h1>
-          <p className="mb-4 mx-4"> 
+          <p className="mb-4 mx-10 text-justify"> 
             <strong>TERMS OF SERVICE</strong><br />
             
             OVERVIEW
@@ -259,7 +259,7 @@ HIVERYLABS PRIVATE LIMITED
 rtp.hiverylabs@gmail.com
 RAIPUR, C.G. 492001
  </p>
- <p className="mb-4 mx-4" >  
+ <p className="mb-4 mx-10 text-justify" >  
  <strong>PRIVACY POLICY</strong><br />
 
 This Privacy Policy describes how HIVERYLABS PRIVATE LIMITED (the "Site", "we", "us", or "our") collects, uses, and discloses your personal information when you visit, use our services, or make a purchase from HIVERYLABS PRIVATE LIMITED.com (the "Site") or otherwise communicate with us (collectively, the "Services"). For purposes of this Privacy Policy, "you" and "your" means you as the user of the Services, whether you are a customer, website visitor, or another individual whose information we have collected pursuant to this Privacy Policy.
@@ -371,7 +371,7 @@ If we transfer your personal information out of Europe, we will rely on recogniz
 
  </p>
 
- <p className="mb-4 mx-4">
+ <p className="mb-4 mx-10 text-justify">
 
  <strong>CONTACT US</strong><br />
 
