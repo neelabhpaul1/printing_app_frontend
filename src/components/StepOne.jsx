@@ -146,8 +146,9 @@ function StepOne({
         
         
         <div className="min-h-screen flex flex-col justify-center items-center absolute w-full bg-white z-10">
-          <strong> HIVERYLABS PRIVATE LIMITED </strong>
-          <p> TERMS OF SERVICE
+          <h1> HIVERYLABS PRIVATE LIMITED </h1>
+          <p className="mb-4"> 
+            <strong>TERMS OF SERVICE</strong>
 OVERVIEW
 This website is operated by HIVERYLABS PRIVATE LIMITED. Throughout the site, the terms “we”, “us” and “our” refer to HIVERYLABS PRIVATE LIMITED. HIVERYLABS PRIVATE LIMITED offers this website, including all information, tools and Services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.
 
@@ -257,8 +258,8 @@ HIVERYLABS PRIVATE LIMITED
 rtp.hiverylabs@gmail.com
 RAIPUR, C.G. 492001
  </p>
- <p>  
- PRIVACY POLICY
+ <p className="mb-4">  
+ <strong>PRIVACY POLICY</strong>
  
 
 This Privacy Policy describes how HIVERYLABS PRIVATE LIMITED (the "Site", "we", "us", or "our") collects, uses, and discloses your personal information when you visit, use our services, or make a purchase from HIVERYLABS PRIVATE LIMITED.com (the "Site") or otherwise communicate with us (collectively, the "Services"). For purposes of this Privacy Policy, "you" and "your" means you as the user of the Services, whether you are a customer, website visitor, or another individual whose information we have collected pursuant to this Privacy Policy.
@@ -380,9 +381,9 @@ Mobile +918982035939
 
  </p>
 
- <p>
+ <p className="mb-4">
 
- CONTACT US
+ <strong>CONTACT US</strong>
 
 Hello there!
 
