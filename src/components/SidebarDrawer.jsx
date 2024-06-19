@@ -29,7 +29,7 @@ const SidebarDrawer = ({ show, closeSidebar }) => {
 					Home
 				</NavLink>
 				<Link
-					to="https://printing-app-admin-frontend-rtp1.vercel.app/"
+					to="https://rtp.hiverylabs.com"
 					className="text-2xl text-gray-900 hover:underline hover:text-black underline-offset-8"
 				>
 					Vendor Portal
