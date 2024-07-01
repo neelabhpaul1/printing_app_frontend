@@ -28,8 +28,8 @@ function StepTwo({
 	const navigate = useNavigate();
 
 	const calculateTotal = () => {
-		let price = 0;
-		if (data.noOfPages < 21) {
+		let price = 1;
+		/* if (data.noOfPages < 21) {
 			if (data.pageSizeFormat === "a3") {
 				price = data.grayOrColored === "0" ? 10 : 35;
 			} else if (data.pageSizeFormat === "a4") {
@@ -47,9 +47,15 @@ function StepTwo({
 			} else if (data.pageSizeFormat === "a4") {
 				price = data.grayOrColored === "0" ? 1 : 7;
 			}
+		} */
+
+		if (data.pageSizeFormat === "a3") {
+			price = data.grayOrColored === "0" ? 10 : 35;
+		} else if (data.pageSizeFormat === "a4") {
+			price = data.grayOrColored === "0" ? 3 : 10;
 		}
 
-		if (data.noOfPages < 0) {
+		/* if (data.noOfPages < 0) {
 			setError({
 				noOfPages: true,
 			});
@@ -58,7 +64,7 @@ function StepTwo({
 					noOfPages: false,
 				});
 			}, 1500);
-		}
+		} */
 		if (data.noOfCopies < 0) {
 			setError({
 				noOfCopies: true,
@@ -178,7 +184,13 @@ function StepTwo({
 
 	useEffect(() => {
 		calculateTotal();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [data]);
+
+	useEffect(() => {
+		handleDataChange("noOfPages", totalPages);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [totalPages]);
 
 	return (
 		<>
@@ -214,96 +226,131 @@ function StepTwo({
 					show ? "hidden" : "block"
 				}`}
 			>
-				<h1 className="text-3xl my-2 p-2">Step Two</h1>
-				<div className="flex mt-2 mb-5 flex-col gap-y-2  md:flex-row md:justify-center md:gap-x-2">
-					<div className="preview bg-white border-2 py-2 mx-2 overflow-auto md:w-3/5  md:flex md:justify-center md:p-5 ">
+				<h1 className="text-2xl px-2 py-4 mb-2 text-gray-900">You are almost there!</h1>
+				<div className="flex mt-2 mb-5 flex-col gap-y-2 md:items-stretch md:flex-row md:justify-center md:gap-x-2">
+					<div className="preview bg-white md:max-w-full border-2 rounded-lg mx-2 overflow-auto  md:flex md:justify-center">
 						{srcFile.loading ? (
 							<strong>Loading Preview...</strong>
 						) : (
 							<>
 								<div className="flex flex-col items-center">
-									<p className="pt-2">Total Pages - {totalPages}</p>
-									<PdfViewer
-										pdfFile={srcFile.src}
-										setTotalPages={setTotalPages}
-									/>
+									{/* <p className="pt-2 mb-4">Total Pages - {totalPages}</p> */}
+									<p className="py-3 font-medium text-xl underline-offset-8 underline">Preview</p>
+									<div className="w-max border-t-2 border-t-gray-200 rounded-b-lg overflow-hidden">
+										<PdfViewer
+											pdfFile={srcFile.src}
+											setTotalPages={setTotalPages}
+										/>
+									</div>
 								</div>
 							</>
 						)}
 					</div>
-					<div className="options bg-white mx-2 border-2 p-3 h-fit md:w-1/4  md:p-5">
-						<div className="input-field">
-							<div htmlFor="no_of_pages">No. of Pages - {totalPages ?? 0}</div>
+					<div className="options bg-white flex flex-col mx-2 overflow-hidden h-fit md:w-1/4">
+						<div className="px-3 md:px-5 border-t-2 border-x-2 rounded-t-lg pt-4">
+							<div className="input-field">
+								<div htmlFor="no_of_pages">
+									No. of Pages - {data.noOfPages ?? 0}
+								</div>
+							</div>
+							<div className="input-field">
+								<label htmlFor="gray_or_colored" className="mb-1.5">
+									Colour Options
+								</label>
+								<select
+									id="gray_or_colored"
+									className="pl-2 form-control"
+									defaultValue="0"
+									onChange={(e) =>
+										handleDataChange("grayOrColored", e.target.value)
+									}
+								>
+									<option value="">Select</option>
+									<option value="0">Grayscale</option>
+									<option value="1">Colored</option>
+								</select>
+							</div>
+							<div className="input-field">
+								<label htmlFor="no_of_copies" className="mb-1.5">
+									No. of copies
+								</label>
+								<input
+									type="number"
+									id="no_of_copies"
+									className="pl-2 form-control"
+									min="1"
+									defaultValue="1"
+									onChange={(e) =>
+										handleDataChange("noOfCopies", e.target.value)
+									}
+								/>
+								{error.noOfCopies ? (
+									<p className="text-red-600 text-start text-sm">
+										Value must be greater than 0
+									</p>
+								) : null}
+							</div>
+							<div className="input-field">
+								<label htmlFor="page_size_format" className="mb-1.5">
+									Page Size Format
+								</label>
+								<select
+									id="page_size_format"
+									className="pl-2 form-control"
+									defaultValue="a4"
+									onChange={(e) =>
+										handleDataChange("pageSizeFormat", e.target.value)
+									}
+								>
+									<option value="">Select</option>
+									<option value="a3">A3</option>
+									<option value="a4">A4</option>
+								</select>
+							</div>
+							<div className="input-field">
+								<label htmlFor="page_sides" className="mb-1.5">
+									Printing Sides
+								</label>
+								<select
+									id="page_sides"
+									className="pl-2 form-control"
+									defaultValue="0"
+									onChange={(e) =>
+										handleDataChange("pageSides", e.target.value)
+									}
+								>
+									<option value="">Select</option>
+									<option value="0">One Sided</option>
+									<option value="1">Double Sided</option>
+								</select>
+							</div>
 						</div>
-						<div className="input-field">
-							<label htmlFor="gray_or_colored">Grayscale/Colored</label>
-							<select
-								id="gray_or_colored"
-								className="pl-2 form-control"
-								onChange={(e) =>
-									handleDataChange("grayOrColored", e.target.value)
-								}
-							>
-								<option value="">Select</option>
-								<option value="0">Grayscale</option>
-								<option value="1">Colored</option>
-							</select>
-						</div>
-						<div className="input-field">
-							<label htmlFor="no_of_copies">No. of Copies</label>
-							<input
-								type="number"
-								id="no_of_copies"
-								className="pl-2 form-control"
-								min="1"
-								onChange={(e) => handleDataChange("noOfCopies", e.target.value)}
-							/>
-							{error.noOfCopies ? (
-								<p className="text-red-600 text-start text-sm">
-									Value must be greater than 0
-								</p>
-							) : null}
-						</div>
-						<div className="input-field">
-							<label htmlFor="page_size_format">Page Size Format</label>
-							<select
-								id="page_size_format"
-								className="pl-2 form-control"
-								onChange={(e) =>
-									handleDataChange("pageSizeFormat", e.target.value)
-								}
-							>
-								<option value="">Select</option>
-								<option value="a3">A3</option>
-								<option value="a4">A4</option>
-							</select>
-						</div>
-						<div className="input-field">
-							<label htmlFor="page_sides">One Sided/Double Sided</label>
-							<select
-								id="page_sides"
-								className="pl-2 form-control"
-								onChange={(e) => handleDataChange("pageSides", e.target.value)}
-							>
-								<option value="">Select</option>
-								<option value="0">One Sided</option>
-								<option value="1">Double Sided</option>
-							</select>
-						</div>
-						<div className="flex flex-col">
-							<span className="total">
-								Total : ₹
-								{total
-									? total + parseInt(`${process.env.REACT_APP_FEES_AMOUNT}`)
-									: 0}
-							</span>
+						<div className="flex flex-col bg-gray-800 py-3 rounded-b-lg">
+							<strong className="total text-white mb-1.5 text-xl">
+								Total :{" "}
+								<strong>
+									₹
+									{total
+										? total + parseInt(`${process.env.REACT_APP_FEES_AMOUNT}`)
+										: 0}
+								</strong>
+							</strong>
 							<div>
-								<button onClick={() => handleStepCounter(-1)}>Prev</button>
+								<button
+									className="border-2 rounded-lg focus:border-indigo-600 px-3 shadow-sm py-1.5"
+									onClick={() => handleStepCounter(-1)}
+								>
+									Prev
+								</button>
 								<button
 									onClick={handlePayment}
-									className={`${total ? "bg-blue-800 text-white" : ""}`}
+									className={`${
+										total > 0
+											? "border-2 rounded-lg border-indigo-600 px-4 bg-indigo-600 text-white py-1.5"
+											: ""
+									}`}
 								>
-									Pay
+									Pay & Print
 								</button>
 							</div>
 						</div>

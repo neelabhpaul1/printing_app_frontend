@@ -724,7 +724,7 @@ function StepOne({
 				</div>
 			) : null}
 			<div
-				className={` w-full mx-3 h-fit  py-5 px-10 mt-5 step-one ${
+				className={` w-full mx-3 h-fit  py-5 px-10 md:mt-5 step-one ${
 					currentStep !== 1 ? "hide" : ""
 				} md:w-96`}
 			>
