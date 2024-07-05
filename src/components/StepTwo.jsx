@@ -148,9 +148,9 @@ function StepTwo({
 			if (
 				data.noOfPages > 0 &&
 				data.noOfCopies > 0 &&
-				data.grayOrColored != "" &&
-				data.pageSizeFormat != "" &&
-				data.pageSides != ""
+				data.grayOrColored !== "" &&
+				data.pageSizeFormat !== "" &&
+				data.pageSides !== ""
 			) {
 				const details = {
 					noOfPages: sendingData.noOfPages,
@@ -226,7 +226,9 @@ function StepTwo({
 					show ? "hidden" : "block"
 				}`}
 			>
-				<h1 className="text-2xl px-2 py-4 mb-2 text-gray-900">You are almost there!</h1>
+				<h1 className="text-2xl px-2 py-4 mb-2 text-gray-900">
+					You are almost there!
+				</h1>
 				<div className="flex mt-2 mb-5 flex-col gap-y-2 md:items-stretch md:flex-row md:justify-center md:gap-x-2">
 					<div className="preview bg-white md:max-w-full border-2 rounded-lg mx-2 overflow-auto  md:flex md:justify-center">
 						{srcFile.loading ? (
@@ -235,7 +237,9 @@ function StepTwo({
 							<>
 								<div className="flex flex-col items-center">
 									{/* <p className="pt-2 mb-4">Total Pages - {totalPages}</p> */}
-									<p className="py-3 font-medium text-xl underline-offset-8 underline">Preview</p>
+									<p className="py-3 font-medium text-xl underline-offset-8 underline">
+										Preview
+									</p>
 									<div className="w-max border-t-2 border-t-gray-200 rounded-b-lg overflow-hidden">
 										<PdfViewer
 											pdfFile={srcFile.src}

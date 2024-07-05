@@ -139,6 +139,7 @@ function StepOne({
 
 	useEffect(() => {
 		checkShopId();
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [id]);
 
 	return (
@@ -765,7 +766,7 @@ function StepOne({
 										aria-hidden="true"
 									/>
 									<div className="mt-4 flex text-sm leading-6 text-gray-600">
-										<div className="relative cursor-pointer rounded-md mx-auto bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
+										<div className="relative cursor-pointer rounded-md mx-auto bg-white font-semibold text-indigo-600 focus-within:outline-none hover:text-indigo-500">
 											<span>Upload document Here</span>
 											<input
 												id="file"
