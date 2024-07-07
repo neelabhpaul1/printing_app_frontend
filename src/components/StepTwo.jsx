@@ -52,7 +52,7 @@ function StepTwo({
 		if (data.pageSizeFormat === "a3") {
 			price = data.grayOrColored === "0" ? 10 : 35;
 		} else if (data.pageSizeFormat === "a4") {
-			price = data.grayOrColored === "0" ? 3 : 10;
+			price = data.grayOrColored === "0" ? 5 : 15;
 		}
 
 		/* if (data.noOfPages < 0) {
