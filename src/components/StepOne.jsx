@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { urlToFormData } from "../utils/file";
 import logo from "../assets/images/logo.png";
-import infoButtton from "../assets/images/INFO_HOW_TO_UPLOAD_BUTTON.png";
+import infoButton from "../assets/images/INFO_HOW_TO_UPLOAD_BUTTON.png";
 
 function StepOne({
 	currentStep,
