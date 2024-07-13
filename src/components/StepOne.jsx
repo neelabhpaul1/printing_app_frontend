@@ -739,8 +739,7 @@ function StepOne({
 				<button
 					onClick={() => window.location.href='https://www.instagram.com/p/C0GxkDyBgjh/'}
 				>
-				<img src={infoButton} alt="Info Button" className="w-4 h-4 mr-2" />
-				Info
+				<img src={infoButton} alt="Info Button" className="w-full h-full" />
 				</button>
 
 				<div className="input-field flex flex-col">
