@@ -736,7 +736,6 @@ function StepOne({
 				/>
 				
 				<button
-					className="border rounded-lg border-indigo-600 px-4 bg-indigo-600 text-white shadow-md py-2 flex items-center"
 					onClick={() => window.location.href='https://www.instagram.com/p/C0GxkDyBgjh/'}
 				>
 				<img src="../assets/images/INFO_HOW_TO_UPLOAD_BUTTON.png" alt="button image" className="w-4 h-4 mr-2" />
