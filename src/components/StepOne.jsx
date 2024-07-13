@@ -737,7 +737,7 @@ function StepOne({
 				/>
 				<div className="flex justify-end">
 					<button
-						onClick={() => window.location.href='https://www.instagram.com/p/C9Xx6MkhBS0/'}
+						onClick={() => window.location.href='https://www.instagram.com/p/C9X2Fu9SERD/'}
 						className="w-16 h-8 p-0 flex items-center justify-center"
 					>
 					<img src={infoButton} alt="Info Button" className="w-full h-full" />
