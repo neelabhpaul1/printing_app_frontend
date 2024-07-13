@@ -736,10 +736,10 @@ function StepOne({
 					className="w-28 h-28 aspect-square mx-auto"
 				/>
 				
-				<button className="flex justify-end"
+				<button
 					onClick={() => window.location.href='https://www.instagram.com/p/C0GxkDyBgjh/'}
 				>
-				<img src={infoButton} alt="Info Button"/>
+				<img src={infoButton} alt="Info Button" className="w-4 h-4 mr-2" />
 				Info
 				</button>
 
