@@ -735,13 +735,14 @@ function StepOne({
 					alt="logo"
 					className="w-28 h-28 aspect-square mx-auto"
 				/>
-				
-				<button
-					onClick={() => window.location.href='https://www.instagram.com/p/C0GxkDyBgjh/'}
-					className="w-16 h-8 p-0"
-				>
-				<img src={infoButton} alt="Info Button" className="w-full h-full" />
-				</button>
+				<div className="flex justify-end">
+					<button
+						onClick={() => window.location.href='https://www.instagram.com/p/C0GxkDyBgjh/'}
+						className="w-16 h-8 p-0 flex items-center justify-center"
+					>
+					<img src={infoButton} alt="Info Button" className="w-full h-full" />
+					</button>
+				</div>
 
 				<div className="input-field flex flex-col">
 					<input
