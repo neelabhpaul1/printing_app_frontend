@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { urlToFormData } from "../utils/file";
 import logo from "../assets/images/logo.png";
+import infoButtton from "../assets/images/INFO_HOW_TO_UPLOAD_BUTTON.png";
 
 function StepOne({
 	currentStep,
@@ -735,10 +736,10 @@ function StepOne({
 					className="w-28 h-28 aspect-square mx-auto"
 				/>
 				
-				<button
+				<button 
 					onClick={() => window.location.href='https://www.instagram.com/p/C0GxkDyBgjh/'}
 				>
-				<img src="../assets/images/INFO_HOW_TO_UPLOAD_BUTTON.png" alt="button image" className="w-4 h-4 mr-2" />
+				<img src={infoButton} alt="Info Button" className="flex justify-end" />
 				Info
 				</button>
 
